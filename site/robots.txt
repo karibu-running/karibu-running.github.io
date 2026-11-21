@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karibu-running.github.io/sitemap.xml

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>シューズ実測マップ｜20足の重さ・かたさ・反発をマップとマトリックスで比較｜カリブー</title>
+<meta name="description" content="ランニングシューズ20足の実測レビュー。重さ・かたさ・反発・くつ底の幅を同じ条件ではかりました。散布図のマップ、重さ×反発のマトリックス、用途別の向き不向きで比べられます。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="カリブー / ランニングシューチューバー">
+<meta property="og:title" content="シューズ実測マップ｜20足の重さ・かたさ・反発をマップとマトリックスで比較｜カリブー">
+<meta property="og:description" content="ランニングシューズ20足の実測レビュー。重さ・かたさ・反発・くつ底の幅を同じ条件ではかりました。散布図のマップ、重さ×反発のマトリックス、用途別の向き不向きで比べられます。">
+<meta property="og:image" content="https://karibu-running.github.io/img/ogp.png">
+<meta property="og:url" content="https://karibu-running.github.io/shoes.html">
+<link rel="canonical" href="https://karibu-running.github.io/shoes.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e1a3c">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shoes">
+<header class="hd" id="hd"></header>
+<main>
+<section class="page-h"><div class="wrap"><h1>シューズ実測マップ</h1><p>実測レビューしたランニングシューズ20足を、同じ条件ではかった数字で比べられます。地図・マトリックス・表の3つの見方で比べられます。靴の名前を押すと、実測値とレビュー動画が開きます。</p></div></section>
+
+<section class="sec" style="padding-top:36px"><div class="wrap">
+  <div class="sec-h"><h2>マップ（散布図）</h2><p>たて軸とよこ軸を自由に入れ替えられます。うすい青の帯は、この20足の中での「ふつう」の範囲です。</p></div>
+  <div class="panel">
+    <div class="presets tabs" id="presets"></div>
+    <div class="ax"><label>よこ軸<select id="ax-x"></select></label><label>たて軸<select id="ax-y"></select></label></div>
+    <div class="mapwrap scroll"><svg id="map" role="group" aria-label="シューズの散布図"></svg></div>
+    <div class="legend" id="legend" aria-label="タイプで絞り込む"></div>
+    <div class="insight" id="insight"></div>
+    <p class="note" id="miss" style="margin:10px 0 0"></p>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><h2>マトリックス（重さ × 反発）</h2><p>20足を「軽い・ふつう・重め」と「よく弾む・ふつう・あまり弾まない」の9マスに分けました。左上ほど、軽くて弾むレース向きの靴です。</p></div>
+  <div class="panel scroll"><div class="mx" id="mx"></div></div>
+  <p class="note">※ FAST-RB はかかとの反発が測れなかったため、前足部の数字で置いています。S/LAB GENESIS 2 はトレイル靴で反発を測っていないため、入れていません。区切りはこの20足の中でのカリブーの目安で、業界の基準ではありません。</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><h2>シューズリスト</h2><p>それぞれの靴を、ジョグ・ポイント練習・レースのどれに使えるか。動画の中での判定をまとめました。◎ いちばん向く／○ 使える／△ 条件つき／✕ 向かない／– 動画で判定していない</p></div>
+  <div class="panel scroll" style="padding:0;overflow:auto;border-radius:18px"><table class="t" id="use"></table></div>
+  <p class="note">並びは「買って後悔しにくい順」です。2026年の19足ランキングに、あとから買ったアルファフライ 4を加えて、20足の順位にしました。下の順位は「悪い靴」ではなく「使う人を選ぶ靴」です。</p>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><h2>目的から選ぶ</h2><p>候補を絞るための早見表です。最後は、今の靴とくらべて走ってみた感覚で決めてください。</p></div>
+  <div class="kv" id="guide"></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><h2>全データ表</h2><p>見出しを押すと並べ替えられます。赤い数字は、その項目でいちばんの靴です。</p></div>
+  <div class="panel scroll" style="padding:0;overflow:auto;border-radius:18px"><table class="t" id="tbl"></table></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><h2>20足の一覧</h2></div>
+  <div class="shoes" id="cards"></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><h2>はかり方</h2></div>
+  <ul class="note">
+    <li>サイズは25.5cm・片足が基本です。Cloudboom Strike 2 は26.0cm、HYPERWARP ELITE 初代は25.0cmで測っています（重さを比べるときは注意）。</li>
+    <li>かたさは、硬度計でソールの横を押した数字です。数字が大きいほどかたい。2層の靴は上の層の数字です。ラボや海外の測定とは測り方が違うので、そのまま比べられません。</li>
+    <li>反発は、同じ高さから玉を落として跳ね返った高さです。体重をかけたときのプレートのしなりは測れません。</li>
+    <li>くつ底の幅は、土踏まずのいちばん細いところの外側の幅です。足が入る中の幅は、靴の上の部分の作りで決まります。</li>
+    <li>価格は2026年11月時点の税込の定価です（Cloudboom Strike 2 とファントムライドは買った値段）。RED HARE 9 ULTRA は日本の正規販売がありません。</li>
+  </ul>
+</div></section>
+</main>
+<div id="ft"></div>
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/shoes.js"></script>
+</body>
+</html>

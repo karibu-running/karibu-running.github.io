@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>動画一覧｜カリブー / ランニングシューチューバー</title>
+<meta name="description" content="カリブーの動画をテーマ別に探せます。シューズの実測レビュー、ペース別の完全版、マラソン準備、練習法、体のケアまで。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="カリブー / ランニングシューチューバー">
+<meta property="og:title" content="動画一覧｜カリブー / ランニングシューチューバー">
+<meta property="og:description" content="カリブーの動画をテーマ別に探せます。シューズの実測レビュー、ペース別の完全版、マラソン準備、練習法、体のケアまで。">
+<meta property="og:image" content="https://karibu-running.github.io/img/ogp.png">
+<meta property="og:url" content="https://karibu-running.github.io/videos.html">
+<link rel="canonical" href="https://karibu-running.github.io/videos.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e1a3c">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="videos">
+<header class="hd" id="hd"></header>
+<main>
+<section class="page-h"><div class="wrap"><h1>動画一覧</h1><p>目標タイムとテーマで絞り込めます。言葉でも探せます。サムネを押すと、このページのまま再生できます。</p></div></section>
+<section class="sec" style="padding-top:32px"><div class="wrap">
+  <div id="long">
+    <div class="tools"><input class="search" id="q" type="search" placeholder="例: サブ4、インターバル、ノヴァブラスト" aria-label="動画を探す"></div>
+    <div class="frow"><span class="fl">目標タイム</span><div class="tabs" id="goals"></div></div>
+    <div class="frow"><span class="fl">テーマ</span><div class="tabs" id="cats"></div></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="list"></div>
+  </div>
+</div></section>
+</main>
+<div id="ft"></div>
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/videos.js"></script>
+</body>
+</html>
