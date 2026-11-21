@@ -40,3 +40,13 @@ sh work/update.sh
 ## トップの背景
 
 シューズ写真と顔写真を並べた画像です。靴を足したら `work/hero_bg.py` の並び順に追加して `python3 work/hero_bg.py`。
+
+## 公開（GitHub Pages）
+
+- 公開先: https://karibu-running.github.io/
+- 置き場所: https://github.com/karibu-running/karibu-running.github.io （公開リポジトリ）
+- 直したあとに公開する: `sh work/publish.sh "何を直したか"`。送ると1〜2分で反映されます。
+- 自動更新: `.github/workflows/deploy.yml` が、日本時間の7:10と19:40に動画一覧を取り直して公開し直します。YouTubeから取れなかった日は、前の一覧のまま公開を続けます。
+- 自動更新は、置き場所に60日間なにも送らないとGitHubが止めます。止まったら、GitHubの Actions の画面で「Enable workflow」を押すか、何か1つ直して送れば再開します。
+- GitHubへ送るための公式ツール gh は `~/.local/gh_dl/` にあります。
+
